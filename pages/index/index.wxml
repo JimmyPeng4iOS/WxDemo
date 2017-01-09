@@ -1,0 +1,55 @@
+<!--index.wxml-->
+<view class="container">
+    <view bindtap="bindViewTap" class="userinfo">
+    <!--view容器 -->
+        <view class="section section_gap swiper">
+        <!--swiper组件 -->
+            <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+                <!--block控制循环从imgUrls里面读取类，这个名字和data里面的要一致 -->
+                <block wx:for-items="{{imgUrls}}">
+                <!--每次循环创建一个swiper-item组件-->
+                    <swiper-item>
+                    <!--组件里面创建image组件，路径读取类里面的img属性-->
+                        <image src="{{item.img}}" class="slide-image"/>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+        <view class="page">
+            <view class="page__bd">
+                <view class="section tc">
+                <!--音乐播放组件-->
+                    <audio poster="{{poster}}" name="{{name}}" author="{{author}}"
+                           src="{{musicSrc}}" action="{{action}}"
+                           bindtimeupdate="bindTimeUpdate" bindplay = "bindplay" controls loop>
+                           </audio>
+                    <!--进度条及时间-->
+                    <view class="section section_gap">
+                        <view class="body-view">
+                        <!--当前时间-->
+                            <view class="minTime">
+                                <text class="minMin">{{minMin}}</text>
+                            </view>
+                        <!--进度条-->
+                            <slider class="slider" value="{{sliderValue}}" bindchange="sliderChange" min="{{minTime}}" max="{{maxTime}}"/>
+                        <!--最大时间-->
+                            <view class="maxTime" text="{{minMin}}">
+                                <text class="maxMin">{{maxMin}}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <!--slider-->
+
+                    <button type="primary" bindtap="audioPlay">播放</button>
+                    <button type="primary" bindtap="audioPause">暂停</button>
+                    <button type="primary" bindtap="audioPlaybackRateSpeedUp">调为2倍速</button>
+                    <button type="primary" bindtap="audioPlaybackRateNormal">调为1倍速</button>
+                    <button type="primary" bindtap="audioPlaybackRateSlowDown">调为0.5倍速</button>
+                    <button type="primary" bindtap="audioNext">下一曲</button>
+                    <button type="primary" bindtap="audioStart">回到开头</button>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

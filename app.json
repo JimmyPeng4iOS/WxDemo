@@ -1,0 +1,40 @@
+{
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#1296db",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tabbar/camera.png",
+        "selectedIconPath": "images/tabbar/camera_hl.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "images/tabbar/bubble.png",
+        "selectedIconPath": "images/tabbar/bubble_hl.png"
+      },
+      {
+        "pagePath": "pages/myLove/myLove",
+        "text": "收藏",
+        "iconPath": "images/tabbar/star.png",
+        "selectedIconPath": "images/tabbar/star_hl.png"
+      }
+    ]
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/message/message",
+    "pages/myLove/myLove"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "J&M..",
+    "navigationBarTextStyle": "black"
+  }
+}

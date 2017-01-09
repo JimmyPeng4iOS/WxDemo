@@ -1,0 +1,58 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.content{
+  margin-top: 50rpx;
+  width:100%;
+  height: 258rpx;
+}
+
+.bg1{
+  display: flex;
+  justify-content: space-between;
+  height: 258rpx;
+
+  background-color: greenyellow;
+}
+
+.t1{
+  height: 60rpx;
+  background-color: pink;
+}
+.t2{
+  height: 60rpx;
+  background-color: gray;
+}
+.t3{
+  height: 60rpx;
+  background-color: antiquewhite;
+}
+.t4{
+  height: 60rpx;
+  background-color: dodgerblue;
+}
+
+/*.bg2{*/
+  /*flex: 0 0 50%;*/
+  /*background-color: gray;*/
+/*}*/
+
+/*.bg3{*/
+  /*flex: 1;*/
+  /*background-color: dodgerblue;*/
+/*}*/
